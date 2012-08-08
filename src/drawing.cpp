@@ -403,155 +403,6 @@ void pushEdge(int edge, vertex_t vertex, std::vector<vertex_t> *vertices)
 		}
 }
 
-//void pushEdge(int edge, float x, float y, float z, float scale, float r, float g, float b, float a, std::vector<float> *vertices, std::vector<unsigned int> *indices, std::vector<float> *textures, std::vector<float> *normals, std::vector<float> *colors)
-//{
-//	unsigned int tail = vertices->size()/3;
-//	//std::vector<float> tempVertices;
-//	//std::vector<unsigned int> tempIndices;
-//	int top = 0;
-//	int bottom = 1;
-//	int left = 2;
-//	int right = 3;
-//	if (edge == top)
-//	{
-//		float cube_vertices[] = 
-//			{x+0, y+0, z+0,
-//			x+scale, y+0, z+0,
-//			x+scale, y+scale, z+0,
-//			x+0, y+scale, z+0
-//			};
-//	
-//		float cube_normals[] = 
-//		{
-//			0.0f, 0.0f, 1.0f,
-//			0.0f, 0.0f, 1.0f,
-//			0.0f, 0.0f, 1.0f,
-//			0.0f, 0.0f, 1.0f
-//		};
-//		float cube_textures[] = 
-//		{0.0f, 0.0f,
-//		1.0f, 0.0f,
-//		1.0f, 1.0f,
-//		0.0f, 1.0f
-//		};
-//	float cube_colors[] = 
-//	{
-//		r, g, b, a, r, g, b, a, r, g, b, a, r, g, b, a
-//	};
-//	unsigned int cube_indices[] = 
-//		{tail+0, tail+1, tail+2, tail+3	};
-//	vertices->insert(vertices->end(), cube_vertices, cube_vertices+24);
-//	indices->insert(indices->end(), cube_indices, cube_indices+8);
-//	textures->insert(textures->end(), cube_textures, cube_textures+16);
-//	normals->insert(normals->end(), cube_normals, cube_normals+24);
-//	colors->insert(colors->end(), cube_colors, cube_colors+32);
-//	}
-//    if (edge == bottom)
-//	{
-//		float cube_vertices[] = 
-//			{x+0, y+0, z-scale,
-//			x+scale, y+0, z-scale,
-//			x+scale, y+scale, z-scale,
-//			x+0, y+scale, z-scale
-//			};
-//	
-//		float cube_normals[] = 
-//		{
-//			0.0f, 0.0f, -1.0f,
-//			0.0f, 0.0f, -1.0f,
-//			0.0f, 0.0f, -1.0f,
-//			0.0f, 0.0f, -1.0f
-//		};
-//		float cube_textures[] = 
-//		{0.0f, 0.0f,
-//		1.0f, 0.0f,
-//		1.0f, 1.0f,
-//		0.0f, 1.0f
-//		};
-//	float cube_colors[] = 
-//	{
-//		r, g, b, a, r, g, b, a, r, g, b, a, r, g, b, a
-//	};
-//	unsigned int cube_indices[] = 
-//		{tail+0, tail+1, tail+2, tail+3	};
-//	vertices->insert(vertices->end(), cube_vertices, cube_vertices+24);
-//	indices->insert(indices->end(), cube_indices, cube_indices+8);
-//	textures->insert(textures->end(), cube_textures, cube_textures+16);
-//	normals->insert(normals->end(), cube_normals, cube_normals+24);
-//	colors->insert(colors->end(), cube_colors, cube_colors+32);
-//	}
-//	if (edge == left)
-//	{
-//		float cube_vertices[] = 
-//			{x+0, y+0, z,
-//			x+0, y+scale, z,
-//			x+0, y+scale, z-scale,
-//			x+0, y+0, z-scale
-//			};
-//	
-//		float cube_normals[] = 
-//		{
-//			-1.0f, 0.0f, 0.0f,
-//			-1.0f, 0.0f, 0.0f,
-//			-1.0f, 0.0f, 0.0f,
-//			-1.0f, 0.0f, 0.0f
-//		};
-//		float cube_textures[] = 
-//		{0.0f, 0.0f,
-//		1.0f, 0.0f,
-//		1.0f, 1.0f,
-//		0.0f, 1.0f
-//		};
-//	float cube_colors[] = 
-//	{
-//		r, g, b, a, r, g, b, a, r, g, b, a, r, g, b, a
-//	};
-//	unsigned int cube_indices[] = 
-//		{tail+0, tail+1, tail+2, tail+3	};
-//	vertices->insert(vertices->end(), cube_vertices, cube_vertices+24);
-//	indices->insert(indices->end(), cube_indices, cube_indices+8);
-//	textures->insert(textures->end(), cube_textures, cube_textures+16);
-//	normals->insert(normals->end(), cube_normals, cube_normals+24);
-//	colors->insert(colors->end(), cube_colors, cube_colors+32);
-//	}
-//	
-//	if (edge == right)
-//	{
-//		float cube_vertices[] = 
-//			{x+scale, y+0, z,
-//			x+scale, y+scale, z,
-//			x+scale, y+scale, z-scale,
-//			x+scale, y+0, z-scale
-//			};
-//	
-//		float cube_normals[] = 
-//		{
-//			1.0f, 0.0f, 0.0f,
-//			1.0f, 0.0f, 0.0f,
-//			1.0f, 0.0f, 0.0f,
-//			1.0f, 0.0f, 0.0f
-//		};
-//		float cube_textures[] = 
-//		{0.0f, 0.0f,
-//		1.0f, 0.0f,
-//		1.0f, 1.0f,
-//		0.0f, 1.0f
-//		};
-//	float cube_colors[] = 
-//	{
-//		r, g, b, a, r, g, b, a, r, g, b, a, r, g, b, a
-//	};
-//	unsigned int cube_indices[] = 
-//		{tail+0, tail+1, tail+2, tail+3	};
-//	vertices->insert(vertices->end(), cube_vertices, cube_vertices+24);
-//	indices->insert(indices->end(), cube_indices, cube_indices+8);
-//	textures->insert(textures->end(), cube_textures, cube_textures+16);
-//	normals->insert(normals->end(), cube_normals, cube_normals+24);
-//	colors->insert(colors->end(), cube_colors, cube_colors+32);
-//	}
-//	
-//}
-
 void pushCube(float x, float y, float z, float scale, float r, float g, float b, float a, std::vector<float> *vertices, std::vector<unsigned int> *indices, std::vector<float> *textures, std::vector<float> *normals, std::vector<float> *colors)
 {
 	unsigned int tail = vertices->size()/3;
@@ -1045,27 +896,7 @@ glTranslatef(0,0,-2);
 	}
 	glTranslatef(0,-1,0);
 	}
-	/*
-			makeOcto(x,y,z,scale);
-			glTranslatef(0,0.5f,0);
-
-			makeOcto(x,y,z,scale);
-			glTranslatef(-0.5f,0,0);
-
-			makeOcto(x,y,z,scale);
-			glTranslatef(0,-0.5f,-0.5f);
-
-			makeOcto(x,y,z,scale);
-			glTranslatef(0.5f,0,0);
-
-			makeOcto(x,y,z,scale);
-			glTranslatef(0,0.5f,0);
-
-			makeOcto(x,y,z,scale);
-			glTranslatef(-0.5f,0,0);
-			makeOcto(x,y,z,scale);*/
-
-		glPopMatrix();
+	glPopMatrix();
 }
 
 void drawPyramid(float x, float y, float z)
@@ -1218,39 +1049,6 @@ void drawSquare(float x1, float y1, float x2, float y2)
 	UNREFERENCED_PARAMETER(y1);
 	UNREFERENCED_PARAMETER(x2);
 	UNREFERENCED_PARAMETER(y2);
-	/*
-	glMatrixMode (GL_PROJECTION);
-	glDisable(GL_DEPTH_TEST);
-	glPushMatrix();
-	
-	glLoadIdentity();
-	
-	//gluOrtho2D (0, Window::getWidth(), 0, Window::getHeight());
-	glOrtho (0, Window::getWidth(), Window::getHeight(), 0, 0, 1);
-	glMatrixMode(GL_MODELVIEW);
-
-	//glLoadIdentity();
-	//glDisable(GL_LIGHTING);
-
-
-	glBegin(GL_QUADS);
-	glVertex3f(x1, y1,0);
-	glVertex3f(x1, y2,0);
-	glVertex3f(x2, y2,0);
-	glVertex3f(x2, y1,0);
-	glEnd();
-	//glRasterPos2f(0,0);
-	
-	
-
-	//glutBitmapCharacter(GLUT_BITMAP_8_BY_13, 'c');
-	//glutBitmapCharacter(GLUT_BITMAP_8_BY_13, 'a');
-	//glEnd();
-	glEnable(GL_LIGHTING);
-	glMatrixMode(GL_PROJECTION);
-	glPopMatrix();
-	glEnable(GL_DEPTH_TEST);
-	glMatrixMode(GL_MODELVIEW);*/
 }
 
 void drawGlyph(float x, float y, char c)
@@ -1258,22 +1056,6 @@ void drawGlyph(float x, float y, char c)
 	UNREFERENCED_PARAMETER(x);
 	UNREFERENCED_PARAMETER(y);
 	UNREFERENCED_PARAMETER(c);
-	/*
-	glMatrixMode (GL_PROJECTION);
-	glDisable(GL_DEPTH_TEST);
-	glDisable(GL_LIGHTING);
-	glPushMatrix();
-	glLoadIdentity();
-	gluOrtho2D (0, Window::getWidth(), 0, Window::getHeight());
-	
-
-	glRasterPos2f(x+5,y+5);
-	glutBitmapCharacter(GLUT_BITMAP_8_BY_13, c);
-
-	glEnable(GL_LIGHTING);
-	glEnable(GL_DEPTH_TEST);
-	glPopMatrix();
-	glMatrixMode(GL_MODELVIEW);*/
 }
 
 void drawBox(float x, float y, Image* image) {
