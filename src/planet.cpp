@@ -11,9 +11,15 @@ Planet::Planet()
 
 GLuint Planet::getBuffer() //Get buffer ID for planet model.
 {
-	return this->buffer;
+	if (glIsBuffer(this->buffer)){
+		return this->buffer;
+	}
+	else {
+		return this->createBuffer();
+	}
+		
 }
-GLuint Planet::createBuffer() //Create a new Buffer for planet model.
+GLuint Planet::createBuffer() //Create and return new Buffer for planet model.
 {
 	glGenBuffers(1, &(this->buffer));
 	return this->buffer;
