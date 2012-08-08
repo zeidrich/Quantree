@@ -48,7 +48,8 @@ char Planet::assignMapgen(Mapgen* mapgen, unsigned char mask) //Assign maps to p
 			maplist.push_back(mapgen);
 		}
 	}*/
-/*	
+	
+	/*	
 	for each unconnected part of mask
 		mapgen = new Mapgen(width*run, height*rise)
 		if the mapgen is larger than 1 side
@@ -110,12 +111,13 @@ Planet* Planet::getPlanetFromMap(Map *map)
 
 Map *Planet::getMapFromPlanet(Planet *planet, char side)
 {
+	//Return the map on the specified side.
+	//TODO: Return map on the specified side.
+	//TODO: Input Validation
 	side;
 	planet;
 	Map *returnMap = 0;
-	/*
-	return the map on the specified side.
-	*/
+	
 	return returnMap;
 }
 
